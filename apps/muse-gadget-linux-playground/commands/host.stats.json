@@ -1,0 +1,5 @@
+{
+  "description": "Read host uptime, load average, and memory. Read-only.",
+  "exec": ["commands/handlers/host-stats.ts"],
+  "timeout_ms": 5000
+}

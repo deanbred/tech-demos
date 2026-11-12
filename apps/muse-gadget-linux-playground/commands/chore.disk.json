@@ -1,0 +1,5 @@
+{
+  "description": "Show disk usage for this app directory only. The path is fixed; parameters cannot change the command.",
+  "exec": ["commands/handlers/disk-chore.ts"],
+  "timeout_ms": 5000
+}

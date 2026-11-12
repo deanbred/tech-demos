@@ -1,5 +1,19 @@
 {
-  "proposed": [],
-  "built": [],
+  "proposed": [
+    {
+      "id": "2106099383037309211",
+      "title": "Muse Gadgets (Linux Device SDK)",
+      "url": "https://x.com/natfriedman/status/2106099383037309211",
+      "date": "2026-11-12"
+    }
+  ],
+  "built": [
+    {
+      "id": "2114699842601558046",
+      "title": "Anthropic sandbox-runtime (srt)",
+      "url": "https://x.com/RoundtableSpace/status/2114699842601558046",
+      "date": "2026-11-12"
+    }
+  ],
   "skipped": []
 }

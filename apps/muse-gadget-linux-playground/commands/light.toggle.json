@@ -1,0 +1,5 @@
+{
+  "description": "Flip the fake gadget light and report whether it is on.",
+  "exec": ["commands/handlers/light-toggle.ts"],
+  "timeout_ms": 5000
+}

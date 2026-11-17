@@ -1,0 +1,162 @@
+{
+  "id": "sample-todo-triage",
+  "label": "Sample: TODO triage on fixtures/sample-repo",
+  "source": "sample",
+  "task": "Find every TODO comment in this repo, count them by file, and fix three of them.",
+  "note": "Illustrative sample data written by hand to demonstrate the UI. None of these numbers are real Code Mode measurements. Record a live pair with `bun run record` to measure for yourself.",
+  "off": {
+    "codeMode": false,
+    "model": "claude-opus-5-5",
+    "note": "Sample data — invented numbers, not a measurement.",
+    "turns": [
+      {
+        "index": 0,
+        "toolCalls": [
+          {
+            "id": "off-1",
+            "name": "Bash",
+            "argsSummary": "grep -rn \"TODO\" --include=\"*.ts\" --include=\"*.md\" .",
+            "durationMs": 2100
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "toolCalls": [
+          { "id": "off-2", "name": "Read", "argsSummary": "src/math.ts", "durationMs": 1400 }
+        ]
+      },
+      {
+        "index": 2,
+        "toolCalls": [
+          { "id": "off-3", "name": "Read", "argsSummary": "src/strings.ts", "durationMs": 1300 }
+        ]
+      },
+      {
+        "index": 3,
+        "toolCalls": [
+          { "id": "off-4", "name": "Read", "argsSummary": "src/dates.ts", "durationMs": 1200 }
+        ]
+      },
+      {
+        "index": 4,
+        "toolCalls": [
+          { "id": "off-5", "name": "Read", "argsSummary": "src/config.ts", "durationMs": 1100 }
+        ]
+      },
+      {
+        "index": 5,
+        "toolCalls": [
+          { "id": "off-6", "name": "Edit", "argsSummary": "src/math.ts", "durationMs": 2400 }
+        ]
+      },
+      {
+        "index": 6,
+        "toolCalls": [
+          { "id": "off-7", "name": "Edit", "argsSummary": "src/strings.ts", "durationMs": 2200 }
+        ]
+      },
+      {
+        "index": 7,
+        "toolCalls": [
+          { "id": "off-8", "name": "Edit", "argsSummary": "src/dates.ts", "durationMs": 2300 }
+        ]
+      },
+      {
+        "index": 8,
+        "toolCalls": [
+          {
+            "id": "off-9",
+            "name": "Bash",
+            "argsSummary": "grep -rc \"TODO\" src/ test/",
+            "durationMs": 1600
+          }
+        ]
+      }
+    ],
+    "totals": {
+      "turns": 11,
+      "toolCalls": 9,
+      "inputTokens": 48200,
+      "outputTokens": 2900,
+      "durationMs": 92400
+    }
+  },
+  "on": {
+    "codeMode": true,
+    "model": "claude-opus-5-5",
+    "note": "Sample data — invented numbers, not a measurement.",
+    "turns": [
+      {
+        "index": 0,
+        "toolCalls": [
+          {
+            "id": "on-1",
+            "name": "REPL",
+            "argsSummary": "Scan for TODOs, count them by file, and read the affected files",
+            "durationMs": 6800,
+            "children": [
+              {
+                "id": "on-1a",
+                "name": "Bash",
+                "argsSummary": "grep -rn \"TODO\" --include=\"*.ts\" --include=\"*.md\" .",
+                "durationMs": 1900
+              },
+              { "id": "on-1b", "name": "Read", "argsSummary": "src/math.ts", "durationMs": 700 },
+              { "id": "on-1c", "name": "Read", "argsSummary": "src/strings.ts", "durationMs": 600 },
+              { "id": "on-1d", "name": "Read", "argsSummary": "src/dates.ts", "durationMs": 600 },
+              { "id": "on-1e", "name": "Read", "argsSummary": "src/config.ts", "durationMs": 500 }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "toolCalls": [
+          {
+            "id": "on-2",
+            "name": "REPL",
+            "argsSummary": "Fix the three highest-value TODOs in one script",
+            "durationMs": 7900,
+            "children": [
+              { "id": "on-2a", "name": "Edit", "argsSummary": "src/math.ts", "durationMs": 1100 },
+              {
+                "id": "on-2b",
+                "name": "Edit",
+                "argsSummary": "src/strings.ts",
+                "durationMs": 1000
+              },
+              { "id": "on-2c", "name": "Edit", "argsSummary": "src/dates.ts", "durationMs": 1000 }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "toolCalls": [
+          {
+            "id": "on-3",
+            "name": "REPL",
+            "argsSummary": "Verify the remaining TODO count per file",
+            "durationMs": 2900,
+            "children": [
+              {
+                "id": "on-3a",
+                "name": "Bash",
+                "argsSummary": "grep -rc \"TODO\" src/ test/",
+                "durationMs": 1400
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "totals": {
+      "turns": 4,
+      "toolCalls": 3,
+      "inputTokens": 21900,
+      "outputTokens": 2100,
+      "durationMs": 41700
+    }
+  }
+}

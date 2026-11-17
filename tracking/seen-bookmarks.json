@@ -1,10 +1,10 @@
 {
   "proposed": [
     {
-      "id": "2106099383037309211",
-      "title": "Muse Gadgets (Linux Device SDK)",
-      "url": "https://x.com/natfriedman/status/2106099383037309211",
-      "date": "2026-11-12"
+      "id": "2121060480714469728",
+      "title": "Modern Web Guidance (GoogleChrome/modern-web-guidance)",
+      "url": "https://x.com/don_tech1/status/2121060480714469728",
+      "date": "2026-11-16"
     }
   ],
   "built": [
@@ -13,6 +13,18 @@
       "title": "Anthropic sandbox-runtime (srt)",
       "url": "https://x.com/RoundtableSpace/status/2114699842601558046",
       "date": "2026-11-12"
+    },
+    {
+      "id": "2106099383037309211",
+      "title": "Muse Gadgets Linux Device SDK",
+      "url": "https://x.com/natfriedman/status/2106099383037309211",
+      "date": "2026-11-12"
+    },
+    {
+      "id": "2121951349718053297",
+      "title": "Claude Code Code Mode (experimental)",
+      "url": "https://x.com/Voxyz_ai/status/2121951349718053297",
+      "date": "2026-11-17"
     }
   ],
   "skipped": []

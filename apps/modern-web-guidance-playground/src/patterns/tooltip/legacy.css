@@ -2,8 +2,10 @@
   display: flex;
 }
 
+.explain { margin-top: 12px; }
+
 .mid-row {
-  margin-top: 56px;
+  margin-top: 20px;
 }
 
 .tooltip {

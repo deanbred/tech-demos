@@ -1,12 +1,5 @@
 {
-  "proposed": [
-    {
-      "id": "2121060480714469728",
-      "title": "Modern Web Guidance (GoogleChrome/modern-web-guidance)",
-      "url": "https://x.com/don_tech1/status/2121060480714469728",
-      "date": "2026-11-16"
-    }
-  ],
+  "proposed": [],
   "built": [
     {
       "id": "2114699842601558046",
@@ -25,6 +18,12 @@
       "title": "Claude Code Code Mode (experimental)",
       "url": "https://x.com/Voxyz_ai/status/2121951349718053297",
       "date": "2026-11-17"
+    },
+    {
+      "id": "2121060480714469728",
+      "title": "Modern Web Guidance (GoogleChrome/modern-web-guidance)",
+      "url": "https://x.com/don_tech1/status/2121060480714469728",
+      "date": "2026-11-16"
     }
   ],
   "skipped": []

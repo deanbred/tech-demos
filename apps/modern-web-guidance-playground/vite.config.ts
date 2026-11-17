@@ -22,10 +22,6 @@ function patternMetricsPlugin(): Plugin {
     },
     async load(id) {
       if (id !== resolvedId) return;
-      for (const entry of patternManifest) {
-        this.addWatchFile(path.join(patternsDir, entry.slug, 'legacy.js'));
-        this.addWatchFile(path.join(patternsDir, entry.slug, 'modern.js'));
-      }
       const metrics = await computeAllMetrics(patternsDir, patternManifest);
       return `export const metrics = ${JSON.stringify(metrics)};`;
     },

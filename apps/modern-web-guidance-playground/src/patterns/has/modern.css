@@ -1,0 +1,43 @@
+.theme-card {
+  --card-bg: #f4f5f9;
+  --card-text: #23262f;
+  --card-border: #c6cad6;
+
+  max-width: 360px;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--card-text);
+  border: 1px solid var(--card-border);
+  transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
+}
+
+/* The parent watches its descendant's :checked state directly. */
+.theme-card:has(.theme-toggle:checked) {
+  --card-bg: #23262f;
+  --card-text: #e8eaf2;
+  --card-border: #4a5068;
+}
+
+/* And its focus state. (:focus-within predates :has(), but :has() composes
+   with any state: :checked, :invalid, :placeholder-shown, …) */
+.theme-card:has(.note-input:focus) {
+  box-shadow: 0 0 0 3px rgba(122, 162, 255, 0.5);
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.note-input {
+  font: inherit;
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: transparent;
+  color: inherit;
+}

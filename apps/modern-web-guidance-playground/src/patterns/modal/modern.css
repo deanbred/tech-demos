@@ -1,0 +1,63 @@
+dialog {
+  background: #262b3b;
+  color: inherit;
+  border: 1px solid #3c4257;
+  border-radius: 12px;
+  padding: 18px;
+  max-width: 320px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Stop scroll gestures chaining to the page behind the modal. */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+  overflow: hidden; /* ::backdrop is not a scroll container by default */
+  overscroll-behavior: contain;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* Entry/exit animation for the top layer (progressive enhancement). */
+@media (prefers-reduced-motion: no-preference) {
+  dialog,
+  dialog::backdrop {
+    transition:
+      opacity 0.2s,
+      translate 0.2s,
+      display 0.2s allow-discrete,
+      overlay 0.2s allow-discrete;
+    opacity: 0;
+  }
+
+  dialog {
+    translate: 0 8px;
+  }
+
+  dialog[open],
+  dialog[open]::backdrop {
+    opacity: 1;
+  }
+
+  dialog[open] {
+    translate: 0 0;
+  }
+
+  @starting-style {
+    dialog[open],
+    dialog[open]::backdrop {
+      opacity: 0;
+    }
+
+    dialog[open] {
+      translate: 0 8px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+/* Shared chrome for every demo iframe (identical for legacy and modern). */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 14px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e8eaf2;
+  background: #171923;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.45em 1em;
+  border-radius: 8px;
+  border: 1px solid #3c4257;
+  background: #262b3b;
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #313750;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #7aa2ff;
+  outline-offset: 2px;
+}
+
+.btn.danger {
+  background: #7f1d2d;
+  border-color: #a63a4b;
+}
+
+.btn.danger:hover {
+  background: #96273a;
+}
+
+h2,
+h3,
+p {
+  margin: 0 0 0.5em;
+}

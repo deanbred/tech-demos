@@ -1,0 +1,15 @@
+<p>The same accordion from native <code>&lt;details&gt;</code>: a shared <code>name</code> gives exclusivity, CSS animates the height. No JS.</p>
+<section class="accordion" aria-label="FAQ">
+  <details name="faq">
+    <summary>What is this?</summary>
+    <p>Native disclosure elements. Semantics, keyboard support and state come free.</p>
+  </details>
+  <details name="faq">
+    <summary>How does the animation work?</summary>
+    <p>CSS transitions ::details-content's block-size to its intrinsic size via interpolate-size.</p>
+  </details>
+  <details name="faq">
+    <summary>And the exclusivity?</summary>
+    <p>The shared name="faq" attribute: the browser closes the others, like radio buttons.</p>
+  </details>
+</section>

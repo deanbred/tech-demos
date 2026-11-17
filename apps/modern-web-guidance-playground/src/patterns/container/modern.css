@@ -1,0 +1,56 @@
+.resizable {
+  resize: horizontal;
+  overflow: hidden;
+  min-width: 180px;
+  max-width: 100%;
+  padding: 0 14px 10px 0;
+  border-right: 3px solid #3c4257;
+  border-radius: 4px;
+}
+
+/* 1. Declare the wrapper a query container for width queries. */
+.container {
+  container-type: inline-size;
+}
+
+/* Default: stacked layout for small containers, details hidden. */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #3c4257;
+  border-radius: 12px;
+  background: #1f2330;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7aa2ff, #6ec28a);
+}
+
+.role {
+  color: #9aa1b5;
+  font-size: 13px;
+}
+
+.details {
+  display: none;
+}
+
+/* 2. Restyle based on the container's own width — no JS, no classes. */
+@container (min-width: 340px) {
+  .profile-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@container (min-width: 420px) {
+  .details {
+    display: block;
+  }
+}

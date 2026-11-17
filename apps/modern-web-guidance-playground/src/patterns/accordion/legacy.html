@@ -1,0 +1,33 @@
+<p>One-open-at-a-time FAQ with animated height, pre-<code>&lt;details name&gt;</code>: divs, ARIA wiring and max-height math.</p>
+<div class="accordion" id="accordion">
+  <div class="acc-item">
+    <h3 class="acc-heading">
+      <button type="button" class="acc-trigger" aria-expanded="false" aria-controls="panel-1">
+        What is this?
+      </button>
+    </h3>
+    <div class="acc-panel" id="panel-1" hidden>
+      <p>A hand-rolled accordion: every behavior below is custom JS.</p>
+    </div>
+  </div>
+  <div class="acc-item">
+    <h3 class="acc-heading">
+      <button type="button" class="acc-trigger" aria-expanded="false" aria-controls="panel-2">
+        How does the animation work?
+      </button>
+    </h3>
+    <div class="acc-panel" id="panel-2" hidden>
+      <p>JS measures scrollHeight, animates max-height, then cleans up on transitionend.</p>
+    </div>
+  </div>
+  <div class="acc-item">
+    <h3 class="acc-heading">
+      <button type="button" class="acc-trigger" aria-expanded="false" aria-controls="panel-3">
+        And the exclusivity?
+      </button>
+    </h3>
+    <div class="acc-panel" id="panel-3" hidden>
+      <p>Also JS: opening one item loops over the others and closes them.</p>
+    </div>
+  </div>
+</div>

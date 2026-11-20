@@ -1,12 +1,5 @@
 {
-  "proposed": [
-    {
-      "id": "2121060480714469728",
-      "title": "Modern Web Guidance (GoogleChrome/modern-web-guidance)",
-      "url": "https://x.com/don_tech1/status/2121060480714469728",
-      "date": "2026-11-16"
-    }
-  ],
+  "proposed": [],
   "built": [
     {
       "id": "2114699842601558046",
@@ -31,6 +24,24 @@
       "title": "Self-Improvement Memory (SIM), arXiv 2611.18856",
       "url": "https://x.com/undefinedKi/status/2123133487448572260",
       "date": "2026-11-19"
+    },
+    {
+      "id": "2121060480714469728",
+      "title": "Modern Web Guidance (GoogleChrome/modern-web-guidance)",
+      "url": "https://x.com/don_tech1/status/2121060480714469728",
+      "date": "2026-11-16"
+    },
+    {
+      "id": "2121402979408318523",
+      "title": "NautilusTrader",
+      "url": "https://x.com/ludoonchart/status/2121402979408318523",
+      "date": "2026-11-18"
+    },
+    {
+      "id": "2123526647152353309",
+      "title": "Self-fixing agent harness (4-file harness + one-file-at-a-time optimizer)",
+      "url": "https://x.com/undefinedKi/status/2123526647152353309",
+      "date": "2026-11-20"
     }
   ],
   "skipped": []

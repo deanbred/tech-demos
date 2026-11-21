@@ -1,0 +1,43 @@
+.demo-row {
+  display: flex;
+}
+
+.explain { margin-top: 12px; }
+
+.mid-row {
+  margin-top: 20px;
+}
+
+.hint {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #9aa1b5;
+}
+
+.tooltip {
+  max-width: 240px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #3c4257;
+  border: 1px solid #555d78;
+  color: #e8eaf2;
+  font-size: 13px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Gate the anchor reset behind @supports so browsers without anchor
+   positioning keep the default centered popover instead of stranding it. */
+@supports (position-area: block-start) {
+  .tooltip {
+    /* popovertarget creates the implicit anchor association: no anchor-name
+       or position-anchor needed. */
+    position: fixed;
+    inset: auto;
+    /* Symmetric block margin keeps an 8px gap whichever side it lands on. */
+    margin: 8px 0;
+
+    /* Above the trigger; the browser flips below when it would overflow. */
+    position-area: block-start;
+    position-try-fallbacks: flip-block;
+  }
+}

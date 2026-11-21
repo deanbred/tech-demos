@@ -1,0 +1,48 @@
+.accordion {
+  border: 1px solid #3c4257;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.acc-item + .acc-item {
+  border-top: 1px solid #3c4257;
+}
+
+.acc-heading {
+  margin: 0;
+}
+
+.acc-trigger {
+  all: unset;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.acc-trigger:hover {
+  background: #262b3b;
+}
+
+.acc-trigger:focus-visible {
+  outline: 2px solid #7aa2ff;
+  outline-offset: -2px;
+}
+
+.acc-panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.acc-panel[hidden] {
+  display: none;
+}
+
+.acc-panel p {
+  margin: 0;
+  padding: 0 12px 10px;
+  color: #b9bfd0;
+}

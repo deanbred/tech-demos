@@ -1,0 +1,43 @@
+.field {
+  max-width: 340px;
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.hint {
+  display: block;
+  color: #9aa1b5;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+input {
+  font: inherit;
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #3c4257;
+  background: #1f2330;
+  color: inherit;
+}
+
+/* JS toggles these classes from its touched-state bookkeeping. */
+input.is-invalid {
+  border-color: #e2695e;
+  background: #33222a;
+}
+
+input.is-valid {
+  border-color: #6ec28a;
+}
+
+.error-msg {
+  color: #e2695e;
+  font-size: 13px;
+  margin-top: 4px;
+}

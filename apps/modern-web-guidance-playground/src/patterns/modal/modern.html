@@ -1,0 +1,15 @@
+<p>The same confirmation with <code>&lt;dialog&gt;</code>, opened declaratively — no JS at all:</p>
+<button type="button" class="btn" command="show-modal" commandfor="confirm-dialog">
+  Delete item…
+</button>
+
+<!-- No role="dialog", aria-modal, focus trap or Esc handler: the native modal
+     provides inert page, top layer, ::backdrop, Esc and focus return. -->
+<dialog id="confirm-dialog" closedby="any" aria-labelledby="confirm-title">
+  <h2 id="confirm-title">Delete this item?</h2>
+  <p>This action cannot be undone.</p>
+  <form method="dialog" class="modal-actions">
+    <button value="cancel" class="btn" autofocus>Cancel</button>
+    <button value="delete" class="btn danger">Delete</button>
+  </form>
+</dialog>

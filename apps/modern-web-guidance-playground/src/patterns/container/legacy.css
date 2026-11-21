@@ -1,0 +1,42 @@
+.resizable {
+  resize: horizontal;
+  overflow: hidden;
+  min-width: 180px;
+  max-width: 100%;
+  padding: 0 14px 10px 0;
+  border-right: 3px solid #3c4257;
+  border-radius: 4px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #3c4257;
+  border-radius: 12px;
+  background: #1f2330;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7aa2ff, #6ec28a);
+}
+
+.role {
+  color: #9aa1b5;
+  font-size: 13px;
+}
+
+/* JS toggles these classes from ResizeObserver callbacks. */
+.profile-card.wide {
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile-card:not(.show-details) .details {
+  display: none;
+}

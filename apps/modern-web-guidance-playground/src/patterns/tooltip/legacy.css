@@ -1,0 +1,25 @@
+.demo-row {
+  display: flex;
+}
+
+.explain { margin-top: 12px; }
+
+.mid-row {
+  margin-top: 20px;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 10;
+  max-width: 240px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #3c4257;
+  border: 1px solid #555d78;
+  font-size: 13px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tooltip[hidden] {
+  display: none;
+}

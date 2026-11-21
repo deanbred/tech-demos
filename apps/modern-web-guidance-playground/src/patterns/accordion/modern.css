@@ -1,0 +1,77 @@
+.accordion {
+  border: 1px solid #3c4257;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+details + details {
+  border-top: 1px solid #3c4257;
+}
+
+summary {
+  /* Replace the default ::marker triangle with an animatable chevron. */
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5ch;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+summary::before {
+  content: '';
+  inline-size: 0.9em;
+  block-size: 0.9em;
+  flex-shrink: 0;
+  background-color: currentColor;
+  /* Inline SVG chevron rendered as a mask so it follows the text color. */
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="black" d="M3 5.5 8 10.5 13 5.5 11.6 4 8 7.6 4.4 4z"/></svg>')
+    no-repeat center / contain;
+  rotate: -90deg; /* Closed: point toward the inline end. */
+}
+
+details[open] > summary::before {
+  rotate: 0deg;
+}
+
+summary:hover {
+  background: #262b3b;
+}
+
+summary:focus-visible {
+  outline: 2px solid #7aa2ff;
+  outline-offset: -2px;
+}
+
+details p {
+  margin: 0;
+  padding: 0 12px 10px 32px;
+  color: #b9bfd0;
+}
+
+/* Animate open/close by transitioning ::details-content to its intrinsic
+   block-size. content-visibility transitions discretely so the content stays
+   rendered until the collapse finishes. */
+details::details-content {
+  interpolate-size: allow-keywords;
+  overflow: clip;
+  contain: layout;
+}
+
+details:not([open])::details-content {
+  block-size: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  summary::before {
+    transition: rotate 0.2s;
+  }
+
+  details::details-content {
+    transition: block-size, content-visibility, display;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-behavior: allow-discrete;
+  }
+}

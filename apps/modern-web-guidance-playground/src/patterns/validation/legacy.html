@@ -1,0 +1,21 @@
+<p>Errors should appear only after the user leaves a field. JS tracks a "touched" flag per field and re-validates on every input:</p>
+<form novalidate>
+  <div class="field">
+    <label for="email">Email address</label>
+    <span class="hint">Format: you@example.com</span>
+    <input type="email" id="email" name="email" autocomplete="email" />
+    <div class="error-msg" id="email-error" hidden>
+      <span role="img" aria-label="Error">❌</span>
+      Enter an email address in the format you@example.com.
+    </div>
+  </div>
+  <div class="field">
+    <label for="username">Username</label>
+    <span class="hint">3–12 lowercase letters or digits</span>
+    <input type="text" id="username" name="username" autocomplete="username" />
+    <div class="error-msg" id="username-error" hidden>
+      <span role="img" aria-label="Error">❌</span>
+      Use 3–12 lowercase letters or digits.
+    </div>
+  </div>
+</form>

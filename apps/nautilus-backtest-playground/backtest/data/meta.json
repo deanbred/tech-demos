@@ -1,0 +1,10 @@
+{
+  "label": "Synthetic data",
+  "seed": 2121402979,
+  "instrument_id": "EUR/USD.SIM",
+  "bar_spec": "1-HOUR-MID-EXTERNAL",
+  "start": "2024-01-01T00:00:00Z",
+  "end": "2024-06-30T23:00:00Z",
+  "rows": 4368,
+  "generator": "Fixed-seed geometric random walk with two sine drifts. Shaped like a major FX pair so Nautilus's EUR/USD test instrument can price it. Not real market history."
+}

@@ -1,0 +1,20 @@
+quants-explorer ports signal rules from example strategies in
+QuantJourney Backtester (https://github.com/QuantJourneyOrg/quantjourney-bt).
+
+Copyright 2024-2026 Jakub Polec / QuantJourney
+Copyright (c) 2026 QuantJourney
+
+Those strategies are licensed under the Apache License, Version 2.0.
+A copy is in LICENSES/Apache-2.0.txt.
+https://www.apache.org/licenses/LICENSE-2.0
+
+Modifications in this demo: the rules were rewritten in TypeScript for a
+single-symbol long/flat engine. A signal observed on bar t is filled at the
+open of bar t+1. Costs are a fixed fee and fixed slippage. The original
+Python runs a multi-name book through the QuantJourney fill engine.
+
+The catalog figures labeled "as published by quants.md" are copied from
+https://quants.md/ (snapshot 2026-11-22, results generated 2026-07-11).
+They are not results produced by this demo.
+
+Price series in public/bars.json are synthetic. They are not market data.
